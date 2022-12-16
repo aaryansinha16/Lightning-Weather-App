@@ -40,7 +40,7 @@ export const data = {
   datasets: [
     {
       label: 'temperature',
-      data: [20,26,22,18],
+      data: [20,26,22,20],
       borderColor: 'orange',
       backgroundColor: 'yellow',
     }

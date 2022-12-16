@@ -12,9 +12,9 @@ import {
 import { data, options } from '../../utils/chartUtils/frontChart'
 // import { Popup } from 'react-leaflet/lib/Popup'
 
-const BottomWeather = () => {
+const BottomWeather = ({futureData}:any) => {
 
-    const [position, setPosition] = useState<any>([22.3072 , 73.1812])
+    const [position, setPosition] = useState<any>([25.55 , 87.55])
     // const map = useMapEvents({
     //     click() {
     //     map.locate()

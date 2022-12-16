@@ -1,17 +1,17 @@
 import { VStack } from '@chakra-ui/react'
-import React from 'react'
+import React, { memo } from 'react'
 import BottomWeather from './BottomWeather'
 import TopSec from './TopSec'
 import WeatherCard from './WeatherCard'
 
-const MainDash = () => {
+const MainDash = ({currData, futureData, pollData} : any) => {
   return (
     <VStack>
-        <TopSec />
-        <WeatherCard />
-        <BottomWeather/>
+        <TopSec currData={currData}/>
+        <WeatherCard currData={currData} pollData={pollData}/>
+        <BottomWeather futureData={futureData}/>
     </VStack>
   )
 }
 
-export default MainDash
+export default memo(MainDash) 
