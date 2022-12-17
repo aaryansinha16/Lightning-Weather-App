@@ -12,6 +12,7 @@ import { TiWeatherCloudy } from 'react-icons/ti'
 import { CalendarIcon } from '@chakra-ui/icons'
 import TabRight from './TabRight'
 import {currentData, initialGet, pollutionData} from '../api/requests'
+import ConstructionImg from '../assets/underCons.jpg'
 
 const RespDash = () => {
    console.log("Responsive render test")
@@ -46,7 +47,7 @@ const RespDash = () => {
    }, [])
 
    return (
-    <Tabs defaultIndex={0} bg='transparent'>
+    <Tabs isLazy defaultIndex={0} bg='transparent' display={{base:'block', md:'none'}}>
         <TabPanels h='92vh'>
             <TabPanel>
                 <Box
@@ -71,7 +72,7 @@ const RespDash = () => {
                     boxSize='100%'
                     mt='100px'
                     fit='cover'
-                    src={'/src/assets/underCons.jpg'}
+                    src={ConstructionImg}
                 />
             </TabPanel>
             <TabPanel>
@@ -80,7 +81,7 @@ const RespDash = () => {
                     boxSize='100%'
                     mt='100px'
                     fit='cover'
-                    src={'/src/assets/underCons.jpg'}
+                    src={ConstructionImg}
                 />
             </TabPanel>
             <TabPanel>
@@ -89,7 +90,7 @@ const RespDash = () => {
                     boxSize='100%'
                     mt='100px'
                     fit='cover'
-                    src={'/src/assets/underCons.jpg'}
+                    src={ConstructionImg}
                 />
             </TabPanel>
             <TabPanel>
@@ -98,7 +99,7 @@ const RespDash = () => {
                     boxSize='100%'
                     mt='100px'
                     fit='cover'
-                    src={'/src/assets/underCons.jpg'}
+                    src={ConstructionImg}
                 />
             </TabPanel>
         </TabPanels>

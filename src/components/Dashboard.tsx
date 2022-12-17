@@ -1,4 +1,4 @@
-import { Tab, TabList, TabPanel, TabPanels, Tabs, VStack, Box, Heading, Text, useToast, Button, HStack, Divider, Flex, Badge } from '@chakra-ui/react'
+import { Tab, TabList, TabPanel, TabPanels, Tabs, VStack, Box, Heading, Text, useToast, Button, HStack, Divider, Flex, Badge, Image } from '@chakra-ui/react'
 import React, {useState, useEffect, memo} from 'react'
 import { AiOutlineHome, AiOutlineTeam } from 'react-icons/ai'
 import { BiBarChartSquare, BiTimeFive } from 'react-icons/bi'
@@ -12,6 +12,7 @@ import { TiWeatherCloudy } from 'react-icons/ti'
 import { CalendarIcon } from '@chakra-ui/icons'
 import TabRight from './TabRight'
 import {currentData, initialGet, pollutionData} from '../api/requests'
+import ConstructionImg from '../assets/underCons.jpg'
 
 const Dashboard = () => {
    console.log("Dashboard render test")
@@ -21,28 +22,28 @@ const Dashboard = () => {
    const [pollData, setPollData] = useState<[]>([])
 
    useEffect(() => {
-      // initialGet()
-      // .then((res) => {
-      //    // console.log(res,'THIS IS RESPONSE')
-      //    setFutureData(res)
-      // })
-      // .catch((e) => console.log('Error:', e))
+      initialGet()
+      .then((res) => {
+         // console.log(res,'THIS IS RESPONSE')
+         setFutureData(res)
+      })
+      .catch((e) => console.log('Error:', e))
 
-      // currentData()
-      // .then((res) =>{
-      //     console.log("Currentdata", res)
-      //     setCurrData(res)
-      //    })
-      // .catch((e) => console.log('error', e))
+      currentData()
+      .then((res) =>{
+          console.log("Currentdata", res)
+          setCurrData(res)
+         })
+      .catch((e) => console.log('error', e))
 
 
-      // pollutionData()
-      // .then((res) => {
-      //    console.log(res,'POLLUTION DATA');
+      pollutionData()
+      .then((res) => {
+         console.log(res,'POLLUTION DATA');
          
-      //    setPollData(res)
-      // })
-      // .catch((e) => console.log("Error", e))
+         setPollData(res)
+      })
+      .catch((e) => console.log("Error", e))
    }, [])
 
    return (
@@ -195,7 +196,13 @@ const Dashboard = () => {
                 <TabPanel >
                      <Box className='tbl' p={6} w='100%' h='90vh'  bgColor='rgba(255, 255, 255, .20)' borderRadius='2xl' style={{backdropFilter: 'blur(5px)'}} boxShadow='lg' m='auto' >
                          <Text fontSize='4xl' color='white'>Users</Text>
-                         {/* <AllTable data={users} title="User" roleHeading="role" totalP="Total Purchases(in Rs)" /> */}
+                         <Heading pt='40px' textAlign='center'>Under Construction</Heading>
+                        <Image
+                           boxSize='100%'
+                           mt='100px'
+                           fit='cover'
+                           src={ConstructionImg}
+                        />
                      </Box>
                 </TabPanel>
  
@@ -203,15 +210,27 @@ const Dashboard = () => {
                 <TabPanel>
                    <Box p={6} w='100%' h='90vh'  bgColor='rgba(255, 255, 255, .20)' borderRadius='2xl' style={{backdropFilter: 'blur(5px)'}} boxShadow='lg' m='auto' >
                          <Text fontSize='4xl' color='white'>Brands</Text>
-                         {/* <AllTable data={brands} title="Brands" /> */}
+                         <Heading pt='40px' textAlign='center'>Under Construction</Heading>
+                        <Image
+                           boxSize='100%'
+                           mt='100px'
+                           fit='cover'
+                           src={ConstructionImg}
+                        />
                    </Box>
                 </TabPanel>
  
                 //* FOR ALL PRODUCTS
                 <TabPanel>
                    <Box w='100%' p={6} h='90vh' bgColor='rgba(255, 255, 255, .20)' borderRadius='2xl' style={{backdropFilter: 'blur(5px)'}} boxShadow='lg' m='auto' >
+                         <Heading pt='40px' textAlign='center'>Under Construction</Heading>
+                        <Image
+                           boxSize='100%'
+                           mt='100px'
+                           fit='cover'
+                           src={ConstructionImg}
+                        />
                          <Text fontSize='4xl' color='white'>Products</Text>
-                         {/* <AllTable data={products} title="Products" roleHeading="Price"  totalP="Ratings" /> */}
                    </Box>
                 </TabPanel>
  
@@ -219,7 +238,13 @@ const Dashboard = () => {
                 <TabPanel>
                    <Box w='100%' p={6} h='90vh'  bgColor='rgba(255, 255, 255, .20)' borderRadius='2xl' style={{backdropFilter: 'blur(5px)'}} boxShadow='lg' m='auto'>
                       <Text fontSize='4xl' color='white'>Create a new Product</Text>
-                      {/* <AdminForm handleCreateProduct={handleCreateProduct} allBrands={allBrands} currPage="newProd"/> */}
+                         <Heading pt='40px' textAlign='center'>Under Construction</Heading>
+                        <Image
+                           boxSize='100%'
+                           mt='100px'
+                           fit='cover'
+                           src={ConstructionImg}
+                        />
                    </Box>
                 </TabPanel>
  
