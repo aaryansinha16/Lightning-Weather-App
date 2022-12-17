@@ -26,9 +26,18 @@ const BottomWeather = ({futureData}:any) => {
     // })
 
   return (
-    <HStack w='100%'  justifyContent='space-between' gap='10px' alignItems='flex-start' pt='10px'>
+    <HStack 
+      w='100%' 
+      flexDir={{base:'column', md:'row'}}  
+      justifyContent='space-between' 
+      gap={{base:'40px', md:'10px'}} 
+      alignItems='flex-start' 
+      pt={{base:'30px',md:'10px'}}
+      position='sticky'
+      top='10%'
+      >
         <VStack 
-            w='60%' 
+            w={{base:'100%',md:'60%'}} 
             borderRadius='25px' 
             boxShadow='2xl'
             align='flex-start'
@@ -44,7 +53,7 @@ const BottomWeather = ({futureData}:any) => {
         </div> */}
 
         <VStack 
-            w='40%' 
+            w={{base:'100%',md:'40%'}} 
             borderRadius='25px' 
             boxShadow='2xl'
             align='flex-start'

@@ -10,9 +10,9 @@ const TopSec = ({currData}:any) => {
     <HStack w='100%' justify='space-between'>
         <Flex alignItems='center' justifyContent='center' gap='20px'>
             <Avatar src={'https://bit.ly/dan-abramov'}/>
-            <VStack spacing='0px' alignItems='flex-start' lineHeight='36px'>
-                <Text fontSize='32px'>Hello,</Text>
-                <Text fontSize='36px' fontWeight='500'>{currData.name}</Text>
+            <VStack spacing='0px' alignItems='flex-start' lineHeight={{base:'26px', md:'36px'}}>
+                <Text fontSize={{base:'18px',md:'32px'}}>Hello,</Text>
+                <Text fontSize={{base:'26px',md:'36px'}} fontWeight='500'>{currData.name}</Text>
             </VStack>
         </Flex>
 

@@ -28,25 +28,25 @@ const Dashboard = () => {
       // })
       // .catch((e) => console.log('Error:', e))
 
-      currentData()
-      .then((res) =>{
-          console.log("Currentdata", res)
-          setCurrData(res)
-         })
-      .catch((e) => console.log('error', e))
+      // currentData()
+      // .then((res) =>{
+      //     console.log("Currentdata", res)
+      //     setCurrData(res)
+      //    })
+      // .catch((e) => console.log('error', e))
 
 
-      pollutionData()
-      .then((res) => {
-         console.log(res,'POLLUTION DATA');
+      // pollutionData()
+      // .then((res) => {
+      //    console.log(res,'POLLUTION DATA');
          
-         setPollData(res)
-      })
-      .catch((e) => console.log("Error", e))
+      //    setPollData(res)
+      // })
+      // .catch((e) => console.log("Error", e))
    }, [])
 
    return (
-      <HStack gap={0} spacing={0} justifyContent='center' pr={4}>
+      <HStack gap={0} spacing={0} justifyContent='center' pr={4} display={{base:'none', md:'flex'}}>
      <Tabs
             //  variant="soft-rounded"
              colorScheme='orange'
@@ -56,9 +56,10 @@ const Dashboard = () => {
              isLazy
              overflow='hidden'
              w={{base:'100%', lg:'80%'}}
+             align='end'
           >
              <TabList
-                flexDir="column"
+                flexDir={{base:'row', md:"column"}}
                 pr={{ base: 0, md: 1 }}
                 pb={5}
                 pl={1}
@@ -69,7 +70,7 @@ const Dashboard = () => {
                 justifyContent="space-between"
                 borderTopRightRadius={"xl"}
              >
-                <VStack spacing={8}>
+                <VStack spacing={8} flexDir={{base:'row', md: 'column'}}>
                    <Tab
                       fontSize={"lg"}
                       bg="transparent"
@@ -166,46 +167,7 @@ const Dashboard = () => {
                       <MdOutlineSettings fontSize="26px"/> 
                    </Tab>
  
-                   {/* <Tab
-                      fontSize={"lg"}
-                      bg="transparent"
-                      transition="0.2s ease-out"
-                      color='black'
-                      _hover={{
-                         background:  "orange",
-                         opacity: "0.9",
-                         transition: "0.2s ease-out",
-                         color:'white'
-                      }}
-                      _selected={{bg: '#f97f29', color: 'white',  boxShadow: '2px 2px 25px orange'}}
-                      w="60%"
-                      borderRadius='12px'
-                      justifyContent="center"
-                   >
-                      <FiPieChart fontSize="26px" />
-                   </Tab> */}
                 </VStack>
- 
-                <Box>
-                 <Button
-                //    onClick={handleLogout}
-                    fontSize={"lg"}
-                    bg="transparent"
-                    transition="0.2s ease-out"
-                    color='black'
-                    _hover={{
-                    background:  "orange",
-                    opacity: "0.9",
-                    transition: "0.2s ease-out",
-                    color:'white'
-                    }}
-                    _selected={{bg: '#f97f29', color: 'white'}}
-                    w="80%"
-                    borderRadius='12px'
-                    justifyContent="center">
-                     <FiPieChart fontSize="26px" />
-                 </Button>
-                </Box>
  
              </TabList>
  
