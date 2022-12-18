@@ -67,6 +67,7 @@ const WeatherCard = ({currData, pollData}:any) => {
 
 
         <VStack 
+            bg='white'
             w={{base:'100%' ,md:'50%'}} 
             borderRadius='25px' 
             boxShadow='lg'

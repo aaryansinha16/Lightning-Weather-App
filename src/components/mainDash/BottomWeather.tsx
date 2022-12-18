@@ -44,6 +44,7 @@ const BottomWeather = ({futureData}:any) => {
             py={2}
             px={8}
             h='290px'
+            bg='white'
             > 
             <Line options={options} width={800} height={30} data={data} />
         </VStack>

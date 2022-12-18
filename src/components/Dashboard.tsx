@@ -53,7 +53,7 @@ const Dashboard = () => {
              colorScheme='orange'
              minH="100vh"
              defaultIndex={0}
-             bg="white"
+            //  bg='rgba(255,255,255, .4)'
              isLazy
              overflow='hidden'
              w={{base:'100%', lg:'80%'}}
@@ -182,7 +182,7 @@ const Dashboard = () => {
                         pt={2} 
                         w='100%' 
                         h='94vh'  
-                        bgColor='rgba(255, 255, 255, .20)' 
+                        bgColor='rgba(100, 100, 100, .10)' 
                         borderRadius='2xl' 
                         style={{backdropFilter: 'blur(5px)'}} 
                         boxShadow='lg' 
@@ -257,6 +257,7 @@ const Dashboard = () => {
                 
              </TabPanels>
           </Tabs>
+          <Box w='100px' h='100px' bg='orange' borderRadius='50%' bottom='-10px' position='fixed' right='-30px'></Box>
          <Box w='20%' display={{base:'none', lg:'block'}}>
             <TabRight/>
          </Box>

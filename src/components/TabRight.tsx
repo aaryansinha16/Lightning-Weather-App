@@ -12,10 +12,12 @@ const TabRight = ({tab}:any) => {
         w={tab == 'menu'? '100%':'100%'}
         h='95vh' 
         borderRadius='25px' 
-        bg='#FAFAEB' 
+        // bg='#FAFAEB' 
         pt={9}
         pl={{base: 2, xl: 6}}
         pr={{base: 2, xl: 6}}
+        bgColor='rgba(250, 250, 145, .20)' 
+        style={{backdropFilter: 'blur(5px)'}} 
         >
             <HStack w={{base:'80%', xl:'100%'}} justifyContent='space-between'>
                 <VStack alignItems='flex-start' spacing={0} lineHeight='26px'>
